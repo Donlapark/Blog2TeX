@@ -45,6 +45,14 @@ for (var i = 0; i < enuNodes.snapshotLength; i++) {
   thisEnu.insertBefore(enuHead, thisEnu.childNodes[0]);
   thisEnu.appendChild(enuTail);
 }
+itemNodes = document.evaluate('//ul', document, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
+for (var i = 0; i < itemNodes.snapshotLength; i++) {
+  var itemHead = document.createTextNode('\\begin{itemize} ');
+  var itemTail = document.createTextNode(' \\end{itemize}');
+  var thisIt = itemNodes.snapshotItem(i);
+  thisIt.insertBefore(itemHead, thisIt.childNodes[0]);
+  thisIt.appendChild(itemTail);
+}
 boldNodes = document.evaluate('//strong', document, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
 for (var i = 0; i < boldNodes.snapshotLength; i++) {
   var boldHead = document.createTextNode('\\textbf{');
@@ -53,6 +61,14 @@ for (var i = 0; i < boldNodes.snapshotLength; i++) {
   thisBold.insertBefore(boldHead, thisBold.childNodes[0]);
   thisBold.appendChild(boldTail);
 }
+bNodes = document.evaluate('//b', document, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
+for (var i = 0; i < bNodes.snapshotLength; i++) {
+  var bHead = document.createTextNode('\\textbf{');
+  var bTail = document.createTextNode('} ');
+  var thisB = bNodes.snapshotItem(i);
+  thisB.insertBefore(bHead, thisB.childNodes[0]);
+  thisB.appendChild(bTail);
+}
 emphNodes = document.evaluate('//em', document, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
 for (var i = 0; i < emphNodes.snapshotLength; i++) {
   var emphHead = document.createTextNode('\\emph{');
@@ -60,4 +76,13 @@ for (var i = 0; i < emphNodes.snapshotLength; i++) {
   var thisEmph = emphNodes.snapshotItem(i);
   thisEmph.insertBefore(emphHead, thisEmph.childNodes[0]);
   thisEmph.appendChild(emphTail);
+}
+
+frameNodes = document.evaluate('//blockquote', document, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
+for (var i = 0; i < frameNodes.snapshotLength; i++) {
+  var frameHead = document.createTextNode('\\begin{framed}');
+  var frameTail = document.createTextNode('\\end{framed} ');
+  var thisFrame = frameNodes.snapshotItem(i);
+  thisFrame.insertBefore(frameHead, thisFrame.childNodes[0]);
+  thisFrame.appendChild(frameTail);
 }
