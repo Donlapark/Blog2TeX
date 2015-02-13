@@ -1,5 +1,6 @@
 # Blog2TeX
-Convert any blog of mathematical exposition into LaTeX using Javascript
+This script converts any Wordpress blog of mathematical exposition into LaTeX using Javascript
+
 I will just explain here how I came up with the code, how can it be used and the ideas for the project in the future.
 First, I am an avid reader of math blogs, and while reading it from the screen is pretty nice since some writers usually give links to other pages that I can refer to so that there's no hassle from looking stuff up from search engine, sometimes I want to be able to print these blogs out and read them when my computor is not around. 
 
