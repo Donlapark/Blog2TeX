@@ -15,9 +15,15 @@ Therefore, I came up with an idea to write a script that can convert all these i
  How the script work
  
  -You will need FireFox browser and GreaseMonkey extension to run this.
--As mentioned before, the script will replace LaTeX pictures with their 'alt' attribute and this should give you LaTeX codes. -It replaces any blank space with \mbox \\\ (I can't just use \\\ here because using \\\ two times in a row is not allowed).
+ 
+-As mentioned before, the script will replace LaTeX pictures with their 'alt' attribute and this should give you LaTeX codes.
+
+-It replaces any blank space with \mbox \\\ (I can't just use \\\ here because using \\\ two times in a row is not allowed).
+
 -It adds \textbf{} and \emph around bolden text and emphasized text.
+
 -After showing the result, you can copy entire page into your LaTeX compiler and compile to either DVI or PDF.
+
 -IMPORTANT: The script will work on any Wordpress blogs, but as of this time I have made it so that it works for Professor Terence Tao's blogs at https://terrytao.wordpress.com/ that don't have blockquotes. To be able to make it work for other blogs, you have to modify your code depending on the layout of the page. For example, Terry Tao's blogs consist of several paragraphs with several topic names in the center, so I have to wrap \begin{center} and \end{center} around these words. You also have to add the metadata "@include https://webpage.com/*" to include the blog that you want in the script.
 
 If you find some errors with the script, please report right away. I also welcome any suggestions since I am still inexperience with this kind of stuff.
