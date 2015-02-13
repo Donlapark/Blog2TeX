@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name        ConvertLatex
-// @namespace   bombuff@hotmail.com
+// @name        Blog2TeX
+// @namespace   Distributed
 // @version     1
 // @include     https://terrytao.wordpress.com/*
 // @grant       none
