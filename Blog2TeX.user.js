@@ -2,7 +2,7 @@
 // @name        Blog2TeX
 // @namespace   Distributed
 // @version     1
-// @include     https://terrytao.wordpress.com/*
+// @include     https://*.wordpress.com/*
 // @grant       none
 // ==/UserScript==
 allImgs = document.evaluate('//img[@class=\'latex\']', document, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
